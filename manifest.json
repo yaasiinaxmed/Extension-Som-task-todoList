@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Som Task",
+    "version": "0.1",
+    "description": "Start Som Task ",
+    "icons": {
+        "128": "logo128.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Som Task"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #0077ff;
+    --secondary-color: #001253;
+    --select-color: #0077ff;
+}
+
+.container {
+    width: 393px;
+    height: 750px;
+    position: relative;
+}
+
+.container .nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+
+.container .search-bar {
+    display: flex;
+    width: 338px;
+    height: 42px;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.container .search-bar .search {
+    width: 85%;
+    height: 100%;
+    background: #d9d9d921;
+    border: none;
+    outline: none;
+    padding: 10px;
+    padding-left: 14px;
+}
+
+.container .search-bar #search-icon {
+    width: 50px;
+    height: 100%;
+    background: var(--primary-color);
+    text-align: center;
+    line-height: 42px;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.container .search-bar #search-icon:hover {
+    filter: brightness(0.9);
+}
+
+.container .msg-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* display: none; */
+}
+
+.container .msg-box.msg {
+    display: none;
+}
+
+.container .msg-box p {
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #7a7a7a9f;
+}
+
+.container .tasks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 14px;
+}
+
+.container .tasks .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+    height: 60px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    border-left: 3px solid var(--select-color);
+}
+
+.container .tasks .task > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.container .tasks .task > div i {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.container .tasks .task > div h2 {
+    font-weight: 500;
+    color: #555;
+}
+
+.container .tasks .task > div .bi-circle {
+    color: #34CD68;
+}
+
+.container .tasks .task > div .bi-pencil-square {
+    color: var(--primary-color);
+    font-size: 1.9em;
+}
+
+.container .tasks .task > div .bi-trash3-fill {
+    color: #EA0000;
+    font-size: 1.9em;
+}
+
+.container .add-task {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 393px;
+    height: 156px;
+    background: linear-gradient(to bottom , var(--primary-color), var(--secondary-color));
+    border-radius: 100px 100px 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.container .add-task .add-icon {
+    position: absolute;
+    bottom: 7rem;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #0077ff62, #8a8de42c);
+    text-align: center;
+    line-height: 85px;
+    font-size: 2.8em;
+    backdrop-filter: blur(10px);
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.container .wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 393px;
+    height: 0px;
+    background: white;
+    border-radius: 120px 120px 0 0 ;
+    border: 5px solid var(--primary-color);
+    border-bottom: transparent;
+    padding: 15px 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    display: none;
+    transition: height 0.4s;
+    
+}
+
+.container .wrapper.active {
+    display: block;
+    height: 320px;
+}
+
+.container .wrapper h3 {
+    text-align: center;
+    padding: 15px;
+    font-size: 2em;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.container .wrapper input {
+    width: 100%;
+    height: 50px;
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: #d9d9d928;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.container .wrapper .select-color {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .wrapper .select-color .title-color {
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #555;
+    padding: 12px 0;
+}
+
+.container .wrapper .select-color .colors {
+    display: flex;
+    gap: 7px;
+}
+
+.container .wrapper .select-color .colors .color {
+    width: 30px;
+    height: 30px;
+    background: var(--color);
+    border-radius: 50%;
+    margin: 10px 0;
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .wrapper .select-color .colors .color.active {
+    border: 1px solid var(--primary-color);
+    transform: scale(1);
+}
+
+.container .wrapper .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 16px;
+}
+
+.container .wrapper .btns button {
+    width: 113px;
+    height: 45px;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.container .wrapper .btns .cancel-btn {
+    background: white;
+    color: var(--primary-color);
+}
+
+.container .wrapper .btns .cancel-btn:hover {
+    background: #0077ff07
+}
+
+.container .wrapper .btns .save-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.container .wrapper .btns .save-btn:hover {
+    filter: brightness(0.9);
+}
